@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小米商品详情</title>
+    <link rel="stylesheet" href="css/xiaomi.css"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.animate-colors-min.js"></script>
+    
+  
+</head>
+<body>
+     <div class="head_box">
+         <div id="head_wrap">
+             <div id="head_nav">
+                 <a class="head_nav_a">癞疙宝网</a>
+                 <span>|</span>
+                 <a class="head_nav_a">MIUI</a>
+                 <span>|</span>
+                 <a class="head_nav_a">米聊</a>
+                 <span>|</span>
+                 <a class="head_nav_a">游戏</a>
+                 <span>|</span>
+                 <a class="head_nav_a">多看阅读</a>
+                 <span>|</span>
+                 <a class="head_nav_a">云服务</a>
+                 <span>|</span>
+                 <a class="head_nav_a">大米移动版</a>
+                 <span>|</span>
+                 <a class="head_nav_a">问题反馈</a>
+                 <span>|</span>
+                 <a class="head_nav_a" id="Select_Region_but">Select Region</a>
+             </div>
+             <div id="head_right">
+                 <div id="head_landing">
+                     <a class="head_nav_a" href="land.html"><i class="fa fa-user-circle-o fa-x"></i> 登录</a>
+                     <span>|</span>
+                     <a class="head_nav_a" href="register.html"><i class="fa fa-user-plus fa-x"></i> 注册</a>
+                 </div>
+                 <div id="head_car">
+                     <a class="head_car_text"><i class="fa fa-shopping-cart fa-x"></i>&nbsp;购物车(0)</a>
+                     <div id="car_content" style="height: 0px;width:0px ;background-color: #edffc6;z-index: 999">
+                         <a class="car_text"></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div id="main_head_box">
+         <div id="menu_wrap">
+             <div id="menu_logo">
+                 <img src="img/m-logo.png" id="m-logo"/>
+                 <img src="img/house.png" id="house"/>
+             </div>
+             <div id="menu_nav">
+                 <ul id="airline">
+
+                     <li class="menu_li" control="xiaomiphone" id="xiaomiphone">
+                         小米手机
+                     </li>
+                     <li class="menu_li" control="hongmiphone" id="hongmiphone">REMI红米</li>
+                     <li class="menu_li" control="pingban" id="pingban">平板</li>
+                     <li class="menu_li" control="tv" id="tv">电视&nbsp;&nbsp;盒子</li>
+                     <li class="menu_li" control="luyou" id="luyou">路由器</li>
+                     <li class="menu_li" control="yingjian" id="yingjian">智能硬件</li>
+                     <li><a>服务</a></li>
+                     <li><a>社区</a></li>
+                 </ul>
+                 <ul id="dh1">
+         
+                 </ul>   
+             </div>
+             <div id="find_wrap">
+                 <div id="find_bar">
+                     <input type="text" id="find_input">
+                 </div>
+                <!-- 收索框设置 -->
+                 <div id="find_but"><i class="fa fa-search fa-x"></i></div>
+             </div>
+         </div>
+     </div>
+     <div id="car_main"></div>
+     
+
+     <!-- 购物车 -->
+     <div class="shopping-car-container">
+            <div class="car-headers-menu">
+                <div class="row">
+                    <div class="col-md-1 col-xs-1 car-menu">
+                        <label><input type="checkbox" id="check-goods-all" /><span id="checkAll">全选</span></label>
+                    </div>
+                    <div class="col-md-3 col-xs-3 car-menu">商品信息</div>
+                    <div class="col-md-3  col-xs-3 car-menu">商品参数</div>
+                    <div class="col-md-1  col-xs-1 car-menu">单价</div>
+                    <div class="col-md-1 col-xs-1 car-menu">数量</div>
+                    <div class="col-md-1 col-xs-1 car-menu">金额</div>
+                    <div class="col-md-2 col-xs-2 car-menu">操作</div>
+                </div>
+            </div>
+            <div class="goods-content">
+            
+
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body bottom-menu-include">
+                    <div class="col-md-1 col-xs-1 check-all-bottom bottom-menu">
+                        <label>
+                                <input type="checkbox" id="checked-all-bottom" />
+                                <span id="checkAllBottom">全选</span>
+                            </label>
+                    </div>
+                    <div class="col-md-6 col-xs-6 bottom-menu">
+        
+                    </div>
+                    <div class="col-md-2 col-xs-2 bottom-menu">
+                        <span>已选商品 <span id="selectGoodsCount">0</span> 件</span>
+                    </div>
+                    <div class="col-md-2 col-xs-2 bottom-menu">
+                        <span>合计：<span id="selectGoodsMoney">0.00</span></span>
+                    </div>
+                    <div class="col-md-1 col-xs-1 bottom-menu submitData submitDis">
+                        结算
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div id="foot_box">
+         <div id="foot_wrap">
+             <div class="foot_top">
+                 <ul>
+                     <li>1小时快修服务</li>
+                     <li class="font_top_i">|</li>
+                     <li>7天无理由退货</li>
+                     <li class="font_top_i">|</li>
+                     <li>15天免费换货</li>
+                     <li class="font_top_i">|</li>
+                     <li>满150元包邮</li>
+                     <li class="font_top_i">|</li>
+                     <li>520余家售后网点</li>
+                 </ul>
+             </div>
+             <div class="foot_bottom">
+                 <div class="foot_bottom_l">
+                     <dl>
+                         <dt>帮助中心</dt>
+                         <dd>购物指南</dd>
+                         <dd>支付方式</dd>
+                         <dd>配送方式</dd>
+                     </dl>
+                     <dl>
+                         <dt>服务支持</dt>
+                         <dd>售后政策</dd>
+                         <dd>自助服务</dd>
+                         <dd>相关下载</dd>
+                     </dl>
+                     <dl>
+                         <dt>大米之家</dt>
+                         <dd>大米之家</dd>
+                         <dd>服务网点</dd>
+                         <dd>预约亲临到店服务</dd>
+                     </dl>
+                     <dl>
+                         <dt>关注我们</dt>
+                         <dd>新浪微博</dd>
+                         <dd>大米部落</dd>
+                         <dd>官方微信</dd>
+                     </dl>
+                 </div>
+                 <div class="foot_bottom_r">
+                     <a>400-100-5678</a>
+                     <a>周一至周日 8:00-18:00</a>
+                     <a>（仅收市话费）</a>
+                     <span> 24小时在线客服</span>
+                 </div>
+             </div>
+         </div>
+         <div class="foot_note_box">
+             <div class="foot_note_wrap">
+                 <div class="foot_note_con">
+                     <span class="foot_logo"><img src="img/mi-logo.png" width="38px" height="38px"></span>
+						<span class="foot_note_txt">
+							<a>大米网</a><h>|</h><a>MIUI</a><h>|</h><a>米聊</a><h>|</h><a>多看书城</a><h>|</h><a>大米路由器</a><h>|</h><a>大米后院</a><h>|</h><a>大米天猫店</a><h>|</h><a>大米淘宝直营店</a><h>|</h><a>大米网盟</a><h>|</h><a>问题反馈</a><h>|</h><a>Select Region</a>
+						    <a> 5555555号</a>
+						</span>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+
+
+</body>
+<script type="text/javascript" src="js/ajax3.js"></script>
+<script type="text/javascript" src="js/xiaomi.js"></script>
+<script type="text/javascript" src="js/shop.js"></script>
+<script type="text/javascript" src="js/car.js"></script>
+
+</html>
